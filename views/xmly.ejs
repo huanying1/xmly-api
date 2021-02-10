@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Api——实战</title>
+    <link rel="stylesheet" href="styles/bootstrap@4.min.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+</head>
+<body>
+<div id="home">
+    <div class="container">
+        <h3 class="text-center">angular9 实战 api</h3>
+        <table class="table table-bordered table-dark table-hover text-center">
+            <thead>
+            <tr>
+                <th>接口名</th>
+                <th>路径</th>
+                <th>请求方式</th>
+                <th>参数</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>面包屑</td>
+                <td>/xmly/breadcrumb</td>
+                <td>get</td>
+                <td>categoryId — 分类ID，默认 ''</td>
+            </tr>
+            <tr>
+                <td>分类详情</td>
+                <td>/xmly/categories</td>
+                <td>get</td>
+                <td>
+                    <p>category — 分类名，默认 'waiyu'</p>
+                    <p>subcategory — 二级分类名，默认 ''</p>
+                </td>
+            </tr>
+            <tr>
+                <td>专辑列表</td>
+                <td>/xmly/albums</td>
+                <td>get</td>
+                <td>
+                    <p>category — 分类名，默认 'waiyu'</p>
+                    <p>subcategory — 二级分类名，默认 ''</p>
+                    <p>meta — 三极分类ID，默认 ''</p>
+                    <p>sort — 排序，0—综合排序；1—最近更新；2-播放最多； 默认 0</p>
+                    <p>page — 当前页，默认 1</p>
+                    <p>perPage — 每页条数，默认 30</p>
+                </td>
+            </tr>
+            <tr>
+                <td>专辑详情</td>
+                <td>/xmly/album</td>
+                <td>get</td>
+                <td>albumId — 专辑ID</td>
+            </tr>
+            <tr>
+                <td>专辑评分</td>
+                <td>/xmly/album-score/{albumId}</td>
+                <td>get</td>
+                <td>albumId — 专辑ID</td>
+            </tr>
+            <tr>
+                <td>专辑播放列表</td>
+                <td>/xmly/album-tracks</td>
+                <td>get</td>
+                <td>
+                    <p>albumId — 专辑ID</p>
+                    <p>pageSize - 每页条数</p>
+                    <p>pageNum - 当前页</p>
+                    <p>sort - 排序 1-倒叙 0-正序</p>
+                </td>
+            </tr>
+            <tr>
+                <td>播放地址</td>
+                <td>/xmly/album-track-url/{trackId}</td>
+                <td>get</td>
+                <td>trackId — 专辑ID</td>
+            </tr>
+            <tr>
+                <td>相关专辑</td>
+                <td>/xmly/album-relate</td>
+                <td>get</td>
+                <td>id — 专辑ID</td>
+            </tr>
+            <tr>
+                <td>登陆</td>
+                <td>/xmly/login</td>
+                <td>post</td>
+                <td>
+                    <p>phone - 手机，默认：13647008979</p>
+                    <p>password - 密码，默认：xmly123</p>
+                </td>
+            </tr>
+            <tr>
+                <td>登陆人信息</td>
+                <td>/xmly/account</td>
+                <td>get</td>
+                <td>——</td>
+            </tr>
+            <tr>
+                <td>退出</td>
+                <td>/xmly/logout</td>
+                <td>get</td>
+                <td>——</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="4">
+                    测试：<a href="/xmly/breadcrumb" target="_blank">面包屑</a>
+                </td>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+</body>
+</html>

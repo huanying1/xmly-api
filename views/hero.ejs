@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Api——英雄教程</title>
+    <link rel="stylesheet" href="styles/bootstrap@4.min.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+</head>
+<body>
+<div id="home">
+    <div class="container">
+        <h3 class="text-center">angular9 英雄教程 api</h3>
+        <table class="table table-bordered table-dark table-hover text-center">
+            <thead>
+            <tr>
+                <th>接口名</th>
+                <th>路径</th>
+                <th>请求方式</th>
+                <th>参数</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>英雄列表</td>
+                <td>/hero/list</td>
+                <td>get</td>
+                <td>
+                    <p>name — 名称，默认 ''</p>
+                    <p>job — 职业，默认 ''</p>
+                    <p>sort — 排序，asc-正序 desc-倒序 默认 'asc'</p>
+                </td>
+            </tr>
+            <tr>
+                <td>英雄详情</td>
+                <td>/hero/detail/{id}</td>
+                <td>get</td>
+                <td>id - 英雄ID</td>
+            </tr>
+            <tr>
+                <td>添加英雄</td>
+                <td>/hero/add</td>
+                <td>post</td>
+                <td>
+                    <p>name — 姓名</p>
+                    <p>phone — 手机</p>
+                    <p>gender — 性别</p>
+                    <p>job — 职业</p>
+                    <p>role — 角色</p>
+                    <p>age — 年龄，可选</p>
+                    <p>email — 邮箱，可选</p>
+                    <p>brief — 简介，可选</p>
+                </td>
+            </tr>
+            <tr>
+                <td>修改英雄</td>
+                <td>/hero/modify/{id}</td>
+                <td>patch</td>
+                <td>同新增</td>
+            </tr>
+            <tr>
+                <td>删除英雄</td>
+                <td>/hero/remove/{id}</td>
+                <td>delete</td>
+                <td>id - 英雄ID</td>
+            </tr>
+            <tr>
+                <td>登陆</td>
+                <td>/hero/login</td>
+                <td>post</td>
+                <td>
+                    <p>name — 名称</p>
+                    <p>password — 密码（默认hero888）</p>
+                </td>
+            </tr>
+            <tr>
+                <td>登陆人信息</td>
+                <td>/hero/account</td>
+                <td>get</td>
+                <td>——</td>
+            </tr>
+            <tr>
+                <td>退出</td>
+                <td>/hero/logout</td>
+                <td>get</td>
+                <td>——</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="4">
+                    测试：<a href="/hero/list" target="_blank">英雄列表</a>
+                </td>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+</body>
+</html>
